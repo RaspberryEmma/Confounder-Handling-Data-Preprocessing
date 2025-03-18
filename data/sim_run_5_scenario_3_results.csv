@@ -1,0 +1,8 @@
+"","pred_mse","model_SE","emp_SE","r_squared_X","r_squared_Y","causal_true_value","causal_estimate","causal_bias","causal_coverage","open_paths","blocked_paths"
+"linear",1.54,0.0313,0.0309,NA,0.387,0.5,1,0.5,0,32,32
+"linear_unadjusted",2.11,0.0348,0.0344,NA,0.162,0.5,1.53,1.03,0,32,0
+"stepwise",1.54,0.0312,0.031,NA,0.387,0.5,1,0.502,0,32,25.1
+"stepwise_X",1.59,0.0317,0.0311,NA,0.368,0.5,1.01,0.506,0,32,20
+"two_step_lasso",1.54,0.0313,0.0309,NA,0.387,0.5,1,0.5,0,32,30.8
+"two_step_lasso_X",1.55,0.0314,0.0309,NA,0.382,0.5,0.998,0.498,0,32,27.9
+"two_step_lasso_union",1.54,0.0313,0.0309,NA,0.387,0.5,1,0.5,0,32,31.8
