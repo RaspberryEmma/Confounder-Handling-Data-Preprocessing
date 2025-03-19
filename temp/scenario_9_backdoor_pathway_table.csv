@@ -1,0 +1,5 @@
+"measured_confounders","unmeasured_confounders","open_paths","linear_full_blocked","stepwise_blocked","stepwise_X_blocked","lasso_blocked","lasso_X_blocked","lasso_union_blocked"
+16,0,16,16,12.9,13.1,15.6,15.6,16
+12,4,16,12,10.2,10.3,11.8,11.8,12
+32,0,32,32,21.2,21.2,29.1,29.1,31.7
+24,8,32,24,16.9,16.9,22.4,22.5,23.9
