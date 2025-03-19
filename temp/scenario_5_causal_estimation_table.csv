@@ -1,5 +1,0 @@
-"measured_confounders","unmeasured_confounders","linear_full_bias","linear_full_coverage","stepwise_bias","stepwise_coverage","stepwise_X_bias","stepwise_X_coverage","lasso_bias","lasso_coverage","lasso_X_bias","lasso_X_coverage","lasso_union_bias","lasso_union_coverage"
-16,0,0.501,0,0.502,0,0.506,0,0.501,0,0.501,0,0.501,0
-12,4,0.537,0,0.537,0,0.54,0,0.537,0,0.537,0,0.537,0
-32,0,0.5,0,0.502,0,0.506,0,0.5,0,0.498,0,0.5,0
-24,8,0.52,0,0.521,0,0.526,0,0.52,0,0.519,0,0.52,0
