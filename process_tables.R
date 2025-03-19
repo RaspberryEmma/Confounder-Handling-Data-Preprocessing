@@ -273,29 +273,34 @@ for (i in 1:8) { lasso_union_emp_se[i] <- get( paste0( "scenario_1_confset_", i,
 lasso_union_model_se <- c()
 for (i in 1:8) { lasso_union_model_se[i] <- get( paste0( "scenario_1_confset_", i, "_data"))["two_step_lasso_union", "model_SE"] }
 
-scenario_1_standard_error_table <- data.frame(measured_confounders,
-                                              unmeasured_confounders,
-                                              true_coefficients,
-                                              linear_full_mean_coef,
-                                              linear_full_emp_se,
-                                              linear_full_model_se,
-                                              stepwise_mean_coef,
-                                              stepwise_emp_se,
-                                              stepwise_model_se,
-                                              stepwise_X_mean_coef,
-                                              stepwise_X_emp_se,
-                                              stepwise_X_model_se,
-                                              lasso_mean_coef,
-                                              lasso_emp_se,
-                                              lasso_model_se,
-                                              lasso_X_mean_coef,
-                                              lasso_X_emp_se,
-                                              lasso_X_model_se,
-                                              lasso_union_mean_coef,
-                                              lasso_union_emp_se,
-                                              lasso_union_model_se)
+scenario_1_standard_error_first_half_table <- data.frame(measured_confounders,
+                                                         unmeasured_confounders,
+                                                         true_coefficients,
+                                                         linear_full_mean_coef,
+                                                         linear_full_emp_se,
+                                                         linear_full_model_se,
+                                                         stepwise_mean_coef,
+                                                         stepwise_emp_se,
+                                                         stepwise_model_se,
+                                                         stepwise_X_mean_coef,
+                                                         stepwise_X_emp_se,
+                                                         stepwise_X_model_se)
 
-print(scenario_1_standard_error_table)
+scenario_1_standard_error_second_half_table <- data.frame(measured_confounders,
+                                                          unmeasured_confounders,
+                                                          true_coefficients,
+                                                          lasso_mean_coef,
+                                                          lasso_emp_se,
+                                                          lasso_model_se,
+                                                          lasso_X_mean_coef,
+                                                          lasso_X_emp_se,
+                                                          lasso_X_model_se,
+                                                          lasso_union_mean_coef,
+                                                          lasso_union_emp_se,
+                                                          lasso_union_model_se)
+
+print(scenario_1_standard_error_first_half_table)
+print(scenario_1_standard_error_second_half_table)
 
 
 
@@ -460,29 +465,34 @@ for (i in 1:num_computed) { lasso_union_emp_se[i] <- get( paste0( "scenario_2_co
 lasso_union_model_se <- c()
 for (i in 1:num_computed) { lasso_union_model_se[i] <- get( paste0( "scenario_2_confset_", i, "_data"))["two_step_lasso_union", "model_SE"] }
 
-scenario_2_standard_error_table <- data.frame(measured_confounders,
-                                              unmeasured_confounders,
-                                              true_coefficients,
-                                              linear_full_mean_coef,
-                                              linear_full_emp_se,
-                                              linear_full_model_se,
-                                              stepwise_mean_coef,
-                                              stepwise_emp_se,
-                                              stepwise_model_se,
-                                              stepwise_X_mean_coef,
-                                              stepwise_X_emp_se,
-                                              stepwise_X_model_se,
-                                              lasso_mean_coef,
-                                              lasso_emp_se,
-                                              lasso_model_se,
-                                              lasso_X_mean_coef,
-                                              lasso_X_emp_se,
-                                              lasso_X_model_se,
-                                              lasso_union_mean_coef,
-                                              lasso_union_emp_se,
-                                              lasso_union_model_se)
+scenario_2_standard_error_first_half_table <- data.frame(measured_confounders,
+                                                         unmeasured_confounders,
+                                                         true_coefficients,
+                                                         linear_full_mean_coef,
+                                                         linear_full_emp_se,
+                                                         linear_full_model_se,
+                                                         stepwise_mean_coef,
+                                                         stepwise_emp_se,
+                                                         stepwise_model_se,
+                                                         stepwise_X_mean_coef,
+                                                         stepwise_X_emp_se,
+                                                         stepwise_X_model_se)
 
-print(scenario_2_standard_error_table)
+scenario_2_standard_error_second_half_table <- data.frame(measured_confounders,
+                                                          unmeasured_confounders,
+                                                          true_coefficients,
+                                                          lasso_mean_coef,
+                                                          lasso_emp_se,
+                                                          lasso_model_se,
+                                                          lasso_X_mean_coef,
+                                                          lasso_X_emp_se,
+                                                          lasso_X_model_se,
+                                                          lasso_union_mean_coef,
+                                                          lasso_union_emp_se,
+                                                          lasso_union_model_se)
+
+print(scenario_2_standard_error_first_half_table)
+print(scenario_2_standard_error_second_half_table)
 
 
 
@@ -647,29 +657,34 @@ for (i in 1:num_computed) { lasso_union_emp_se[i] <- get( paste0( "scenario_3_co
 lasso_union_model_se <- c()
 for (i in 1:num_computed) { lasso_union_model_se[i] <- get( paste0( "scenario_3_confset_", i, "_data"))["two_step_lasso_union", "model_SE"] }
 
-scenario_3_standard_error_table <- data.frame(measured_confounders,
-                                              unmeasured_confounders,
-                                              true_coefficients,
-                                              linear_full_mean_coef,
-                                              linear_full_emp_se,
-                                              linear_full_model_se,
-                                              stepwise_mean_coef,
-                                              stepwise_emp_se,
-                                              stepwise_model_se,
-                                              stepwise_X_mean_coef,
-                                              stepwise_X_emp_se,
-                                              stepwise_X_model_se,
-                                              lasso_mean_coef,
-                                              lasso_emp_se,
-                                              lasso_model_se,
-                                              lasso_X_mean_coef,
-                                              lasso_X_emp_se,
-                                              lasso_X_model_se,
-                                              lasso_union_mean_coef,
-                                              lasso_union_emp_se,
-                                              lasso_union_model_se)
+scenario_3_standard_error_first_half_table <- data.frame(measured_confounders,
+                                                         unmeasured_confounders,
+                                                         true_coefficients,
+                                                         linear_full_mean_coef,
+                                                         linear_full_emp_se,
+                                                         linear_full_model_se,
+                                                         stepwise_mean_coef,
+                                                         stepwise_emp_se,
+                                                         stepwise_model_se,
+                                                         stepwise_X_mean_coef,
+                                                         stepwise_X_emp_se,
+                                                         stepwise_X_model_se)
 
-print(scenario_3_standard_error_table)
+scenario_3_standard_error_second_half_table <- data.frame(measured_confounders,
+                                                          unmeasured_confounders,
+                                                          true_coefficients,
+                                                          lasso_mean_coef,
+                                                          lasso_emp_se,
+                                                          lasso_model_se,
+                                                          lasso_X_mean_coef,
+                                                          lasso_X_emp_se,
+                                                          lasso_X_model_se,
+                                                          lasso_union_mean_coef,
+                                                          lasso_union_emp_se,
+                                                          lasso_union_model_se)
+
+print(scenario_3_standard_error_first_half_table)
+print(scenario_3_standard_error_second_half_table)
 
 
 
@@ -834,29 +849,34 @@ for (i in 1:num_computed) { lasso_union_emp_se[i] <- get( paste0( "scenario_4_co
 lasso_union_model_se <- c()
 for (i in 1:num_computed) { lasso_union_model_se[i] <- get( paste0( "scenario_4_confset_", i, "_data"))["two_step_lasso_union", "model_SE"] }
 
-scenario_4_standard_error_table <- data.frame(measured_confounders,
-                                              unmeasured_confounders,
-                                              true_coefficients,
-                                              linear_full_mean_coef,
-                                              linear_full_emp_se,
-                                              linear_full_model_se,
-                                              stepwise_mean_coef,
-                                              stepwise_emp_se,
-                                              stepwise_model_se,
-                                              stepwise_X_mean_coef,
-                                              stepwise_X_emp_se,
-                                              stepwise_X_model_se,
-                                              lasso_mean_coef,
-                                              lasso_emp_se,
-                                              lasso_model_se,
-                                              lasso_X_mean_coef,
-                                              lasso_X_emp_se,
-                                              lasso_X_model_se,
-                                              lasso_union_mean_coef,
-                                              lasso_union_emp_se,
-                                              lasso_union_model_se)
+scenario_4_standard_error_first_half_table <- data.frame(measured_confounders,
+                                                         unmeasured_confounders,
+                                                         true_coefficients,
+                                                         linear_full_mean_coef,
+                                                         linear_full_emp_se,
+                                                         linear_full_model_se,
+                                                         stepwise_mean_coef,
+                                                         stepwise_emp_se,
+                                                         stepwise_model_se,
+                                                         stepwise_X_mean_coef,
+                                                         stepwise_X_emp_se,
+                                                         stepwise_X_model_se)
 
-print(scenario_4_standard_error_table)
+scenario_4_standard_error_second_half_table <- data.frame(measured_confounders,
+                                                          unmeasured_confounders,
+                                                          true_coefficients,
+                                                          lasso_mean_coef,
+                                                          lasso_emp_se,
+                                                          lasso_model_se,
+                                                          lasso_X_mean_coef,
+                                                          lasso_X_emp_se,
+                                                          lasso_X_model_se,
+                                                          lasso_union_mean_coef,
+                                                          lasso_union_emp_se,
+                                                          lasso_union_model_se)
+
+print(scenario_4_standard_error_first_half_table)
+print(scenario_4_standard_error_second_half_table)
 
 
 
@@ -1021,29 +1041,34 @@ for (i in 1:num_computed) { lasso_union_emp_se[i] <- get( paste0( "scenario_5_co
 lasso_union_model_se <- c()
 for (i in 1:num_computed) { lasso_union_model_se[i] <- get( paste0( "scenario_5_confset_", i, "_data"))["two_step_lasso_union", "model_SE"] }
 
-scenario_5_standard_error_table <- data.frame(measured_confounders,
-                                              unmeasured_confounders,
-                                              true_coefficients,
-                                              linear_full_mean_coef,
-                                              linear_full_emp_se,
-                                              linear_full_model_se,
-                                              stepwise_mean_coef,
-                                              stepwise_emp_se,
-                                              stepwise_model_se,
-                                              stepwise_X_mean_coef,
-                                              stepwise_X_emp_se,
-                                              stepwise_X_model_se,
-                                              lasso_mean_coef,
-                                              lasso_emp_se,
-                                              lasso_model_se,
-                                              lasso_X_mean_coef,
-                                              lasso_X_emp_se,
-                                              lasso_X_model_se,
-                                              lasso_union_mean_coef,
-                                              lasso_union_emp_se,
-                                              lasso_union_model_se)
+scenario_5_standard_error_first_half_table <- data.frame(measured_confounders,
+                                                         unmeasured_confounders,
+                                                         true_coefficients,
+                                                         linear_full_mean_coef,
+                                                         linear_full_emp_se,
+                                                         linear_full_model_se,
+                                                         stepwise_mean_coef,
+                                                         stepwise_emp_se,
+                                                         stepwise_model_se,
+                                                         stepwise_X_mean_coef,
+                                                         stepwise_X_emp_se,
+                                                         stepwise_X_model_se)
 
-print(scenario_5_standard_error_table)
+scenario_5_standard_error_second_half_table <- data.frame(measured_confounders,
+                                                          unmeasured_confounders,
+                                                          true_coefficients,
+                                                          lasso_mean_coef,
+                                                          lasso_emp_se,
+                                                          lasso_model_se,
+                                                          lasso_X_mean_coef,
+                                                          lasso_X_emp_se,
+                                                          lasso_X_model_se,
+                                                          lasso_union_mean_coef,
+                                                          lasso_union_emp_se,
+                                                          lasso_union_model_se)
+
+print(scenario_5_standard_error_first_half_table)
+print(scenario_5_standard_error_second_half_table)
 
 
 
@@ -1208,29 +1233,34 @@ for (i in 1:num_computed) { lasso_union_emp_se[i] <- get( paste0( "scenario_6_co
 lasso_union_model_se <- c()
 for (i in 1:num_computed) { lasso_union_model_se[i] <- get( paste0( "scenario_6_confset_", i, "_data"))["two_step_lasso_union", "model_SE"] }
 
-scenario_6_standard_error_table <- data.frame(measured_confounders,
-                                              unmeasured_confounders,
-                                              true_coefficients,
-                                              linear_full_mean_coef,
-                                              linear_full_emp_se,
-                                              linear_full_model_se,
-                                              stepwise_mean_coef,
-                                              stepwise_emp_se,
-                                              stepwise_model_se,
-                                              stepwise_X_mean_coef,
-                                              stepwise_X_emp_se,
-                                              stepwise_X_model_se,
-                                              lasso_mean_coef,
-                                              lasso_emp_se,
-                                              lasso_model_se,
-                                              lasso_X_mean_coef,
-                                              lasso_X_emp_se,
-                                              lasso_X_model_se,
-                                              lasso_union_mean_coef,
-                                              lasso_union_emp_se,
-                                              lasso_union_model_se)
+scenario_6_standard_error_first_half_table <- data.frame(measured_confounders,
+                                                         unmeasured_confounders,
+                                                         true_coefficients,
+                                                         linear_full_mean_coef,
+                                                         linear_full_emp_se,
+                                                         linear_full_model_se,
+                                                         stepwise_mean_coef,
+                                                         stepwise_emp_se,
+                                                         stepwise_model_se,
+                                                         stepwise_X_mean_coef,
+                                                         stepwise_X_emp_se,
+                                                         stepwise_X_model_se)
 
-print(scenario_6_standard_error_table)
+scenario_6_standard_error_second_half_table <- data.frame(measured_confounders,
+                                                          unmeasured_confounders,
+                                                          true_coefficients,
+                                                          lasso_mean_coef,
+                                                          lasso_emp_se,
+                                                          lasso_model_se,
+                                                          lasso_X_mean_coef,
+                                                          lasso_X_emp_se,
+                                                          lasso_X_model_se,
+                                                          lasso_union_mean_coef,
+                                                          lasso_union_emp_se,
+                                                          lasso_union_model_se)
+
+print(scenario_6_standard_error_first_half_table)
+print(scenario_6_standard_error_second_half_table)
 
 
 
@@ -1395,29 +1425,34 @@ for (i in 1:num_computed) { lasso_union_emp_se[i] <- get( paste0( "scenario_7_co
 lasso_union_model_se <- c()
 for (i in 1:num_computed) { lasso_union_model_se[i] <- get( paste0( "scenario_7_confset_", i, "_data"))["two_step_lasso_union", "model_SE"] }
 
-scenario_7_standard_error_table <- data.frame(measured_confounders,
-                                              unmeasured_confounders,
-                                              true_coefficients,
-                                              linear_full_mean_coef,
-                                              linear_full_emp_se,
-                                              linear_full_model_se,
-                                              stepwise_mean_coef,
-                                              stepwise_emp_se,
-                                              stepwise_model_se,
-                                              stepwise_X_mean_coef,
-                                              stepwise_X_emp_se,
-                                              stepwise_X_model_se,
-                                              lasso_mean_coef,
-                                              lasso_emp_se,
-                                              lasso_model_se,
-                                              lasso_X_mean_coef,
-                                              lasso_X_emp_se,
-                                              lasso_X_model_se,
-                                              lasso_union_mean_coef,
-                                              lasso_union_emp_se,
-                                              lasso_union_model_se)
+scenario_7_standard_error_first_half_table <- data.frame(measured_confounders,
+                                                         unmeasured_confounders,
+                                                         true_coefficients,
+                                                         linear_full_mean_coef,
+                                                         linear_full_emp_se,
+                                                         linear_full_model_se,
+                                                         stepwise_mean_coef,
+                                                         stepwise_emp_se,
+                                                         stepwise_model_se,
+                                                         stepwise_X_mean_coef,
+                                                         stepwise_X_emp_se,
+                                                         stepwise_X_model_se)
 
-print(scenario_7_standard_error_table)
+scenario_7_standard_error_second_half_table <- data.frame(measured_confounders,
+                                                          unmeasured_confounders,
+                                                          true_coefficients,
+                                                          lasso_mean_coef,
+                                                          lasso_emp_se,
+                                                          lasso_model_se,
+                                                          lasso_X_mean_coef,
+                                                          lasso_X_emp_se,
+                                                          lasso_X_model_se,
+                                                          lasso_union_mean_coef,
+                                                          lasso_union_emp_se,
+                                                          lasso_union_model_se)
+
+print(scenario_7_standard_error_first_half_table)
+print(scenario_7_standard_error_second_half_table)
 
 
 
@@ -1582,29 +1617,35 @@ for (i in 1:num_computed) { lasso_union_emp_se[i] <- get( paste0( "scenario_8_co
 lasso_union_model_se <- c()
 for (i in 1:num_computed) { lasso_union_model_se[i] <- get( paste0( "scenario_8_confset_", i, "_data"))["two_step_lasso_union", "model_SE"] }
 
-scenario_8_standard_error_table <- data.frame(measured_confounders,
-                                              unmeasured_confounders,
-                                              true_coefficients,
-                                              linear_full_mean_coef,
-                                              linear_full_emp_se,
-                                              linear_full_model_se,
-                                              stepwise_mean_coef,
-                                              stepwise_emp_se,
-                                              stepwise_model_se,
-                                              stepwise_X_mean_coef,
-                                              stepwise_X_emp_se,
-                                              stepwise_X_model_se,
-                                              lasso_mean_coef,
-                                              lasso_emp_se,
-                                              lasso_model_se,
-                                              lasso_X_mean_coef,
-                                              lasso_X_emp_se,
-                                              lasso_X_model_se,
-                                              lasso_union_mean_coef,
-                                              lasso_union_emp_se,
-                                              lasso_union_model_se)
+scenario_8_standard_error_first_half_table <- data.frame(measured_confounders,
+                                                         unmeasured_confounders,
+                                                         true_coefficients,
+                                                         linear_full_mean_coef,
+                                                         linear_full_emp_se,
+                                                         linear_full_model_se,
+                                                         stepwise_mean_coef,
+                                                         stepwise_emp_se,
+                                                         stepwise_model_se,
+                                                         stepwise_X_mean_coef,
+                                                         stepwise_X_emp_se,
+                                                         stepwise_X_model_se)
 
-print(scenario_8_standard_error_table)
+scenario_8_standard_error_second_half_table <- data.frame(measured_confounders,
+                                                          unmeasured_confounders,
+                                                          true_coefficients,
+                                                          lasso_mean_coef,
+                                                          lasso_emp_se,
+                                                          lasso_model_se,
+                                                          lasso_X_mean_coef,
+                                                          lasso_X_emp_se,
+                                                          lasso_X_model_se,
+                                                          lasso_union_mean_coef,
+                                                          lasso_union_emp_se,
+                                                          lasso_union_model_se)
+
+print(scenario_8_standard_error_first_half_table)
+print(scenario_8_standard_error_second_half_table)
+
 
 
 # ----- Generate Scenario 9 Tables -----
@@ -1768,29 +1809,34 @@ for (i in 1:num_computed) { lasso_union_emp_se[i] <- get( paste0( "scenario_9_co
 lasso_union_model_se <- c()
 for (i in 1:num_computed) { lasso_union_model_se[i] <- get( paste0( "scenario_9_confset_", i, "_data"))["two_step_lasso_union", "model_SE"] }
 
-scenario_9_standard_error_table <- data.frame(measured_confounders,
-                                              unmeasured_confounders,
-                                              true_coefficients,
-                                              linear_full_mean_coef,
-                                              linear_full_emp_se,
-                                              linear_full_model_se,
-                                              stepwise_mean_coef,
-                                              stepwise_emp_se,
-                                              stepwise_model_se,
-                                              stepwise_X_mean_coef,
-                                              stepwise_X_emp_se,
-                                              stepwise_X_model_se,
-                                              lasso_mean_coef,
-                                              lasso_emp_se,
-                                              lasso_model_se,
-                                              lasso_X_mean_coef,
-                                              lasso_X_emp_se,
-                                              lasso_X_model_se,
-                                              lasso_union_mean_coef,
-                                              lasso_union_emp_se,
-                                              lasso_union_model_se)
+scenario_9_standard_error_first_half_table <- data.frame(measured_confounders,
+                                                         unmeasured_confounders,
+                                                         true_coefficients,
+                                                         linear_full_mean_coef,
+                                                         linear_full_emp_se,
+                                                         linear_full_model_se,
+                                                         stepwise_mean_coef,
+                                                         stepwise_emp_se,
+                                                         stepwise_model_se,
+                                                         stepwise_X_mean_coef,
+                                                         stepwise_X_emp_se,
+                                                         stepwise_X_model_se)
 
-print(scenario_9_standard_error_table)
+scenario_9_standard_error_second_half_table <- data.frame(measured_confounders,
+                                                          unmeasured_confounders,
+                                                          true_coefficients,
+                                                          lasso_mean_coef,
+                                                          lasso_emp_se,
+                                                          lasso_model_se,
+                                                          lasso_X_mean_coef,
+                                                          lasso_X_emp_se,
+                                                          lasso_X_model_se,
+                                                          lasso_union_mean_coef,
+                                                          lasso_union_emp_se,
+                                                          lasso_union_model_se)
+
+print(scenario_9_standard_error_first_half_table)
+print(scenario_9_standard_error_second_half_table)
 
 
 
@@ -1799,39 +1845,50 @@ print(scenario_9_standard_error_table)
 
 write.csv(scenario_1_causal_estimation_table, "temp/scenario_1_causal_estimation_table.csv", row.names = FALSE)
 write.csv(scenario_1_backdoor_pathway_table,  "temp/scenario_1_backdoor_pathway_table.csv", row.names = FALSE)
-write.csv(scenario_1_standard_error_table,    "temp/scenario_1_standard_error_table.csv", row.names = FALSE)
+write.csv(scenario_1_standard_error_first_half_table,  "temp/scenario_1_standard_error_first_half_table.csv", row.names = FALSE)
+write.csv(scenario_1_standard_error_second_half_table, "temp/scenario_1_standard_error_second_half_table.csv", row.names = FALSE)
 
 write.csv(scenario_2_causal_estimation_table, "temp/scenario_2_causal_estimation_table.csv", row.names = FALSE)
 write.csv(scenario_2_backdoor_pathway_table,  "temp/scenario_2_backdoor_pathway_table.csv", row.names = FALSE)
-write.csv(scenario_2_standard_error_table,    "temp/scenario_2_standard_error_table.csv", row.names = FALSE)
+write.csv(scenario_2_standard_error_first_half_table,  "temp/scenario_2_standard_error_first_half_table.csv", row.names = FALSE)
+write.csv(scenario_2_standard_error_second_half_table, "temp/scenario_2_standard_error_second_half_table.csv", row.names = FALSE)
 
 write.csv(scenario_3_causal_estimation_table, "temp/scenario_3_causal_estimation_table.csv", row.names = FALSE)
 write.csv(scenario_3_backdoor_pathway_table,  "temp/scenario_3_backdoor_pathway_table.csv", row.names = FALSE)
-write.csv(scenario_3_standard_error_table,    "temp/scenario_3_standard_error_table.csv", row.names = FALSE)
+write.csv(scenario_3_standard_error_first_half_table,  "temp/scenario_3_standard_error_first_half_table.csv", row.names = FALSE)
+write.csv(scenario_3_standard_error_second_half_table, "temp/scenario_3_standard_error_second_half_table.csv", row.names = FALSE)
 
 write.csv(scenario_4_causal_estimation_table, "temp/scenario_4_causal_estimation_table.csv", row.names = FALSE)
 write.csv(scenario_4_backdoor_pathway_table,  "temp/scenario_4_backdoor_pathway_table.csv", row.names = FALSE)
-write.csv(scenario_4_standard_error_table,    "temp/scenario_4_standard_error_table.csv", row.names = FALSE)
+write.csv(scenario_4_standard_error_first_half_table,  "temp/scenario_4_standard_error_first_half_table.csv", row.names = FALSE)
+write.csv(scenario_4_standard_error_second_half_table, "temp/scenario_4_standard_error_second_half_table.csv", row.names = FALSE)
 
 write.csv(scenario_5_causal_estimation_table, "temp/scenario_5_causal_estimation_table.csv", row.names = FALSE)
 write.csv(scenario_5_backdoor_pathway_table,  "temp/scenario_5_backdoor_pathway_table.csv", row.names = FALSE)
-write.csv(scenario_5_standard_error_table,    "temp/scenario_5_standard_error_table.csv", row.names = FALSE)
+write.csv(scenario_5_standard_error_first_half_table,  "temp/scenario_5_standard_error_first_half_table.csv", row.names = FALSE)
+write.csv(scenario_5_standard_error_second_half_table, "temp/scenario_5_standard_error_second_half_table.csv", row.names = FALSE)
 
 write.csv(scenario_6_causal_estimation_table, "temp/scenario_6_causal_estimation_table.csv", row.names = FALSE)
 write.csv(scenario_6_backdoor_pathway_table,  "temp/scenario_6_backdoor_pathway_table.csv", row.names = FALSE)
-write.csv(scenario_6_standard_error_table,    "temp/scenario_6_standard_error_table.csv", row.names = FALSE)
+write.csv(scenario_6_standard_error_first_half_table,  "temp/scenario_6_standard_error_first_half_table.csv", row.names = FALSE)
+write.csv(scenario_6_standard_error_second_half_table, "temp/scenario_6_standard_error_second_half_table.csv", row.names = FALSE)
 
 write.csv(scenario_7_causal_estimation_table, "temp/scenario_7_causal_estimation_table.csv", row.names = FALSE)
 write.csv(scenario_7_backdoor_pathway_table,  "temp/scenario_7_backdoor_pathway_table.csv", row.names = FALSE)
-write.csv(scenario_7_standard_error_table,    "temp/scenario_7_standard_error_table.csv", row.names = FALSE)
+write.csv(scenario_7_standard_error_first_half_table,  "temp/scenario_7_standard_error_first_half_table.csv", row.names = FALSE)
+write.csv(scenario_7_standard_error_second_half_table, "temp/scenario_7_standard_error_second_half_table.csv", row.names = FALSE)
 
 write.csv(scenario_8_causal_estimation_table, "temp/scenario_8_causal_estimation_table.csv", row.names = FALSE)
 write.csv(scenario_8_backdoor_pathway_table,  "temp/scenario_8_backdoor_pathway_table.csv", row.names = FALSE)
-write.csv(scenario_8_standard_error_table,    "temp/scenario_8_standard_error_table.csv", row.names = FALSE)
+write.csv(scenario_8_standard_error_first_half_table,  "temp/scenario_8_standard_error_first_half_table.csv", row.names = FALSE)
+write.csv(scenario_8_standard_error_second_half_table, "temp/scenario_8_standard_error_second_half_table.csv", row.names = FALSE)
 
 write.csv(scenario_9_causal_estimation_table, "temp/scenario_9_causal_estimation_table.csv", row.names = FALSE)
 write.csv(scenario_9_backdoor_pathway_table,  "temp/scenario_9_backdoor_pathway_table.csv", row.names = FALSE)
-write.csv(scenario_9_standard_error_table,    "temp/scenario_9_standard_error_table.csv", row.names = FALSE)
+write.csv(scenario_9_standard_error_first_half_table,  "temp/scenario_9_standard_error_first_half_table.csv", row.names = FALSE)
+write.csv(scenario_9_standard_error_second_half_table, "temp/scenario_9_standard_error_second_half_table.csv", row.names = FALSE)
+
+
 
 
 
