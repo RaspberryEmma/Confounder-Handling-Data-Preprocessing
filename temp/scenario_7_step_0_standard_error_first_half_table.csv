@@ -1,0 +1,9 @@
+"measured_confounders","unmeasured_confounders","true_coefficients","linear_full_mean_coef","linear_full_emp_se","linear_full_model_se","stepwise_mean_coef","stepwise_emp_se","stepwise_model_se","stepwise_X_mean_coef","stepwise_X_emp_se","stepwise_X_model_se"
+16,0,0.15,0.149,0.0581,0.0591,NA,NA,NA,NA,NA,NA
+12,4,0.15,0.184,0.0577,0.0586,NA,NA,NA,NA,NA,NA
+32,0,0.15,0.152,0.0601,0.0591,NA,NA,NA,NA,NA,NA
+24,8,0.15,0.17,0.0578,0.0588,NA,NA,NA,NA,NA,NA
+64,0,0.15,0.152,0.0598,0.0593,NA,NA,NA,NA,NA,NA
+48,16,0.15,0.161,0.0608,0.0591,NA,NA,NA,NA,NA,NA
+128,0,0.15,0.153,0.0606,0.0598,NA,NA,NA,NA,NA,NA
+96,32,0.15,0.157,0.0593,0.0595,NA,NA,NA,NA,NA,NA

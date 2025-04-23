@@ -1,0 +1,9 @@
+"measured_confounders","unmeasured_confounders","open_paths","linear_full_blocked","linear_full_blocked_percentage","stepwise_blocked","stepwise_blocked_percentage","stepwise_X_blocked","stepwise_X_blocked_percentage","lasso_blocked","lasso_blocked_percentage","lasso_X_blocked","lasso_X_blocked_percentage","lasso_union_blocked","lasso_union_blocked_percentage"
+16,0,16,16,1,NA,NA,NA,NA,16,1,15.3,0.956,16,1
+12,4,16,12,0.75,NA,NA,NA,NA,12,0.75,11.9,0.744,12,0.75
+32,0,32,32,1,NA,NA,NA,NA,31.3,0.978,27.9,0.872,31.9,0.997
+24,8,32,24,0.75,NA,NA,NA,NA,24,0.75,22.7,0.709,24,0.75
+64,0,64,64,1,NA,NA,NA,NA,57.8,0.903,47.1,0.736,62.4,0.975
+48,16,64,48,0.75,NA,NA,NA,NA,46.6,0.728,39.9,0.623,47.7,0.745
+128,0,128,128,1,NA,NA,NA,NA,101,0.789,67.8,0.53,115,0.898
+96,32,128,96,0.75,NA,NA,NA,NA,84,0.656,60,0.469,91.5,0.715

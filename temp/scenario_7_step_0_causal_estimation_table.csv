@@ -1,0 +1,9 @@
+"measured_confounders","unmeasured_confounders","linear_full_bias","linear_full_coverage","stepwise_bias","stepwise_coverage","stepwise_X_bias","stepwise_X_coverage","lasso_bias","lasso_coverage","lasso_X_bias","lasso_X_coverage","lasso_union_bias","lasso_union_coverage"
+16,0,-0.000591,0.95,NA,NA,NA,NA,-0.00107,0.95,-0.00123,0.95,-0.000589,0.95
+12,4,0.0341,0.916,NA,NA,NA,NA,0.034,0.916,0.034,0.916,0.0341,0.916
+32,0,0.00174,0.942,NA,NA,NA,NA,-0.000237,0.943,-0.000739,0.941,0.00178,0.942
+24,8,0.0198,0.939,NA,NA,NA,NA,0.0192,0.938,0.019,0.939,0.0198,0.939
+64,0,0.00222,0.952,NA,NA,NA,NA,-0.00327,0.951,-0.004,0.952,0.00268,0.952
+48,16,0.011,0.939,NA,NA,NA,NA,0.00794,0.942,0.00752,0.944,0.0111,0.938
+128,0,0.00269,0.948,NA,NA,NA,NA,-0.0106,0.953,-0.0115,0.951,0.00567,0.947
+96,32,0.00737,0.94,NA,NA,NA,NA,-0.00181,0.946,-0.00259,0.946,0.00869,0.94
