@@ -8,8 +8,8 @@
 #
 # Emma Tarmey
 #
-# Started:          14/03/2024
-# Most Recent Edit: 23/04/2024
+# Started:          14/03/2025
+# Most Recent Edit: 23/04/2025
 # ****************************************
 
 
@@ -29,7 +29,7 @@ if (Sys.getenv("RSTUDIO") == "1") {
 
 # ----- Repeat entire procedure twice -----
 
-for (step_off_on in c(0)) {
+for (step_off_on in c(1)) {
   # stepwise off / on variable, used for file i/o at either end
   # variables in the middle otherwise unaffected
   step_string <- paste0("step_", step_off_on)
@@ -58,8 +58,8 @@ for (step_off_on in c(0)) {
   scenario_2_confset_4_data <- read.csv(paste0("data/sim_run_2_scenario_4_", step_string, "_results.csv"), row.names = 1)
   scenario_2_confset_5_data <- read.csv(paste0("data/sim_run_2_scenario_5_", step_string, "_results.csv"), row.names = 1)
   scenario_2_confset_6_data <- read.csv(paste0("data/sim_run_2_scenario_6_", step_string, "_results.csv"), row.names = 1)
-  scenario_2_confset_7_data <- read.csv(paste0("data/sim_run_2_scenario_7_", step_string, "_results.csv"), row.names = 1)
-  scenario_2_confset_8_data <- read.csv(paste0("data/sim_run_2_scenario_8_", step_string, "_results.csv"), row.names = 1)
+  # scenario_2_confset_7_data <- read.csv(paste0("data/sim_run_2_scenario_7_", step_string, "_results.csv"), row.names = 1)
+  # scenario_2_confset_8_data <- read.csv(paste0("data/sim_run_2_scenario_8_", step_string, "_results.csv"), row.names = 1)
   
   scenario_3_confset_1_data <- read.csv(paste0("data/sim_run_3_scenario_1_", step_string, "_results.csv"), row.names = 1)
   scenario_3_confset_2_data <- read.csv(paste0("data/sim_run_3_scenario_2_", step_string, "_results.csv"), row.names = 1)
@@ -67,8 +67,8 @@ for (step_off_on in c(0)) {
   scenario_3_confset_4_data <- read.csv(paste0("data/sim_run_3_scenario_4_", step_string, "_results.csv"), row.names = 1)
   scenario_3_confset_5_data <- read.csv(paste0("data/sim_run_3_scenario_5_", step_string, "_results.csv"), row.names = 1)
   scenario_3_confset_6_data <- read.csv(paste0("data/sim_run_3_scenario_6_", step_string, "_results.csv"), row.names = 1)
-  scenario_3_confset_7_data <- read.csv(paste0("data/sim_run_3_scenario_7_", step_string, "_results.csv"), row.names = 1)
-  scenario_3_confset_8_data <- read.csv(paste0("data/sim_run_3_scenario_8_", step_string, "_results.csv"), row.names = 1)
+  # scenario_3_confset_7_data <- read.csv(paste0("data/sim_run_3_scenario_7_", step_string, "_results.csv"), row.names = 1)
+  # scenario_3_confset_8_data <- read.csv(paste0("data/sim_run_3_scenario_8_", step_string, "_results.csv"), row.names = 1)
   
   scenario_4_confset_1_data <- read.csv(paste0("data/sim_run_4_scenario_1_", step_string, "_results.csv"), row.names = 1)
   scenario_4_confset_2_data <- read.csv(paste0("data/sim_run_4_scenario_2_", step_string, "_results.csv"), row.names = 1)
@@ -76,8 +76,8 @@ for (step_off_on in c(0)) {
   scenario_4_confset_4_data <- read.csv(paste0("data/sim_run_4_scenario_4_", step_string, "_results.csv"), row.names = 1)
   scenario_4_confset_5_data <- read.csv(paste0("data/sim_run_4_scenario_5_", step_string, "_results.csv"), row.names = 1)
   scenario_4_confset_6_data <- read.csv(paste0("data/sim_run_4_scenario_6_", step_string, "_results.csv"), row.names = 1)
-  scenario_4_confset_7_data <- read.csv(paste0("data/sim_run_4_scenario_7_", step_string, "_results.csv"), row.names = 1)
-  scenario_4_confset_8_data <- read.csv(paste0("data/sim_run_4_scenario_8_", step_string, "_results.csv"), row.names = 1)
+  # scenario_4_confset_7_data <- read.csv(paste0("data/sim_run_4_scenario_7_", step_string, "_results.csv"), row.names = 1)
+  # scenario_4_confset_8_data <- read.csv(paste0("data/sim_run_4_scenario_8_", step_string, "_results.csv"), row.names = 1)
   
   scenario_5_confset_1_data <- read.csv(paste0("data/sim_run_5_scenario_1_", step_string, "_results.csv"), row.names = 1)
   scenario_5_confset_2_data <- read.csv(paste0("data/sim_run_5_scenario_2_", step_string, "_results.csv"), row.names = 1)
@@ -85,8 +85,8 @@ for (step_off_on in c(0)) {
   scenario_5_confset_4_data <- read.csv(paste0("data/sim_run_5_scenario_4_", step_string, "_results.csv"), row.names = 1)
   scenario_5_confset_5_data <- read.csv(paste0("data/sim_run_5_scenario_5_", step_string, "_results.csv"), row.names = 1)
   scenario_5_confset_6_data <- read.csv(paste0("data/sim_run_5_scenario_6_", step_string, "_results.csv"), row.names = 1)
-  scenario_5_confset_7_data <- read.csv(paste0("data/sim_run_5_scenario_7_", step_string, "_results.csv"), row.names = 1)
-  scenario_5_confset_8_data <- read.csv(paste0("data/sim_run_5_scenario_8_", step_string, "_results.csv"), row.names = 1)
+  # scenario_5_confset_7_data <- read.csv(paste0("data/sim_run_5_scenario_7_", step_string, "_results.csv"), row.names = 1)
+  # scenario_5_confset_8_data <- read.csv(paste0("data/sim_run_5_scenario_8_", step_string, "_results.csv"), row.names = 1)
   
   scenario_6_confset_1_data <- read.csv(paste0("data/sim_run_6_scenario_1_", step_string, "_results.csv"), row.names = 1)
   scenario_6_confset_2_data <- read.csv(paste0("data/sim_run_6_scenario_2_", step_string, "_results.csv"), row.names = 1)
@@ -94,8 +94,8 @@ for (step_off_on in c(0)) {
   scenario_6_confset_4_data <- read.csv(paste0("data/sim_run_6_scenario_4_", step_string, "_results.csv"), row.names = 1)
   scenario_6_confset_5_data <- read.csv(paste0("data/sim_run_6_scenario_5_", step_string, "_results.csv"), row.names = 1)
   scenario_6_confset_6_data <- read.csv(paste0("data/sim_run_6_scenario_6_", step_string, "_results.csv"), row.names = 1)
-  scenario_6_confset_7_data <- read.csv(paste0("data/sim_run_6_scenario_7_", step_string, "_results.csv"), row.names = 1)
-  scenario_6_confset_8_data <- read.csv(paste0("data/sim_run_6_scenario_8_", step_string, "_results.csv"), row.names = 1)
+  # scenario_6_confset_7_data <- read.csv(paste0("data/sim_run_6_scenario_7_", step_string, "_results.csv"), row.names = 1)
+  # scenario_6_confset_8_data <- read.csv(paste0("data/sim_run_6_scenario_8_", step_string, "_results.csv"), row.names = 1)
   
   scenario_7_confset_1_data <- read.csv(paste0("data/sim_run_7_scenario_1_", step_string, "_results.csv"), row.names = 1)
   scenario_7_confset_2_data <- read.csv(paste0("data/sim_run_7_scenario_2_", step_string, "_results.csv"), row.names = 1)
@@ -103,15 +103,15 @@ for (step_off_on in c(0)) {
   scenario_7_confset_4_data <- read.csv(paste0("data/sim_run_7_scenario_4_", step_string, "_results.csv"), row.names = 1)
   scenario_7_confset_5_data <- read.csv(paste0("data/sim_run_7_scenario_5_", step_string, "_results.csv"), row.names = 1)
   scenario_7_confset_6_data <- read.csv(paste0("data/sim_run_7_scenario_6_", step_string, "_results.csv"), row.names = 1)
-  scenario_7_confset_7_data <- read.csv(paste0("data/sim_run_7_scenario_7_", step_string, "_results.csv"), row.names = 1)
-  scenario_7_confset_8_data <- read.csv(paste0("data/sim_run_7_scenario_8_", step_string, "_results.csv"), row.names = 1)
+  # scenario_7_confset_7_data <- read.csv(paste0("data/sim_run_7_scenario_7_", step_string, "_results.csv"), row.names = 1)
+  # scenario_7_confset_8_data <- read.csv(paste0("data/sim_run_7_scenario_8_", step_string, "_results.csv"), row.names = 1)
   
   scenario_8_confset_1_data <- read.csv(paste0("data/sim_run_8_scenario_1_", step_string, "_results.csv"), row.names = 1)
   scenario_8_confset_2_data <- read.csv(paste0("data/sim_run_8_scenario_2_", step_string, "_results.csv"), row.names = 1)
   scenario_8_confset_3_data <- read.csv(paste0("data/sim_run_8_scenario_3_", step_string, "_results.csv"), row.names = 1)
   scenario_8_confset_4_data <- read.csv(paste0("data/sim_run_8_scenario_4_", step_string, "_results.csv"), row.names = 1)
-  # scenario_8_confset_5_data <- read.csv(paste0("data/sim_run_8_scenario_5_", step_string, "_results.csv"), row.names = 1)
-  # scenario_8_confset_6_data <- read.csv(paste0("data/sim_run_8_scenario_6_", step_string, "_results.csv"), row.names = 1)
+  scenario_8_confset_5_data <- read.csv(paste0("data/sim_run_8_scenario_5_", step_string, "_results.csv"), row.names = 1)
+  scenario_8_confset_6_data <- read.csv(paste0("data/sim_run_8_scenario_6_", step_string, "_results.csv"), row.names = 1)
   # scenario_8_confset_7_data <- read.csv(paste0("data/sim_run_8_scenario_7_", step_string, "_results.csv"), row.names = 1)
   # scenario_8_confset_8_data <- read.csv(paste0("data/sim_run_8_scenario_8_", step_string, "_results.csv"), row.names = 1)
   
@@ -121,8 +121,8 @@ for (step_off_on in c(0)) {
   scenario_9_confset_4_data <- read.csv(paste0("data/sim_run_9_scenario_4_", step_string, "_results.csv"), row.names = 1)
   scenario_9_confset_5_data <- read.csv(paste0("data/sim_run_9_scenario_5_", step_string, "_results.csv"), row.names = 1)
   scenario_9_confset_6_data <- read.csv(paste0("data/sim_run_9_scenario_6_", step_string, "_results.csv"), row.names = 1)
-  scenario_9_confset_7_data <- read.csv(paste0("data/sim_run_9_scenario_7_", step_string, "_results.csv"), row.names = 1)
-  scenario_9_confset_8_data <- read.csv(paste0("data/sim_run_9_scenario_8_", step_string, "_results.csv"), row.names = 1)
+  # scenario_9_confset_7_data <- read.csv(paste0("data/sim_run_9_scenario_7_", step_string, "_results.csv"), row.names = 1)
+  # scenario_9_confset_8_data <- read.csv(paste0("data/sim_run_9_scenario_8_", step_string, "_results.csv"), row.names = 1)
   
   
   
@@ -340,7 +340,7 @@ for (step_off_on in c(0)) {
   measured_confounders   <- c(16, 12, 32, 24, 64, 48, 128,  96)
   unmeasured_confounders <- c( 0,  4,  0,  8,  0, 16,   0,  32)
   total_confounders      <- c(16, 16, 32, 32, 64, 64, 128, 128)
-  num_computed <- 8
+  num_computed <- 6
   measured_confounders   <- measured_confounders[1:num_computed]
   unmeasured_confounders <- unmeasured_confounders[1:num_computed]
   true_coefficients      <- true_coefficients[1:num_computed]
@@ -558,7 +558,7 @@ for (step_off_on in c(0)) {
   measured_confounders   <- c(16, 12, 32, 24, 64, 48, 128,  96)
   unmeasured_confounders <- c( 0,  4,  0,  8,  0, 16,   0,  32)
   total_confounders      <- c(16, 16, 32, 32, 64, 64, 128, 128)
-  num_computed <- 8
+  num_computed <- 6
   measured_confounders   <- measured_confounders[1:num_computed]
   unmeasured_confounders <- unmeasured_confounders[1:num_computed]
   true_coefficients      <- true_coefficients[1:num_computed]
@@ -776,7 +776,7 @@ for (step_off_on in c(0)) {
   measured_confounders   <- c(16, 12, 32, 24, 64, 48, 128,  96)
   unmeasured_confounders <- c( 0,  4,  0,  8,  0, 16,   0,  32)
   total_confounders      <- c(16, 16, 32, 32, 64, 64, 128, 128)
-  num_computed <- 8
+  num_computed <- 6
   measured_confounders   <- measured_confounders[1:num_computed]
   unmeasured_confounders <- unmeasured_confounders[1:num_computed]
   true_coefficients      <- true_coefficients[1:num_computed]
@@ -994,7 +994,7 @@ for (step_off_on in c(0)) {
   measured_confounders   <- c(16, 12, 32, 24, 64, 48, 128,  96)
   unmeasured_confounders <- c( 0,  4,  0,  8,  0, 16,   0,  32)
   total_confounders      <- c(16, 16, 32, 32, 64, 64, 128, 128)
-  num_computed <- 8
+  num_computed <- 6
   measured_confounders   <- measured_confounders[1:num_computed]
   unmeasured_confounders <- unmeasured_confounders[1:num_computed]
   true_coefficients      <- true_coefficients[1:num_computed]
@@ -1212,7 +1212,7 @@ for (step_off_on in c(0)) {
   measured_confounders   <- c(16, 12, 32, 24, 64, 48, 128,  96)
   unmeasured_confounders <- c( 0,  4,  0,  8,  0, 16,   0,  32)
   total_confounders      <- c(16, 16, 32, 32, 64, 64, 128, 128)
-  num_computed <- 8
+  num_computed <- 6
   measured_confounders   <- measured_confounders[1:num_computed]
   unmeasured_confounders <- unmeasured_confounders[1:num_computed]
   true_coefficients      <- true_coefficients[1:num_computed]
@@ -1430,7 +1430,7 @@ for (step_off_on in c(0)) {
   measured_confounders   <- c(16, 12, 32, 24, 64, 48, 128,  96)
   unmeasured_confounders <- c( 0,  4,  0,  8,  0, 16,   0,  32)
   total_confounders      <- c(16, 16, 32, 32, 64, 64, 128, 128)
-  num_computed <- 8
+  num_computed <- 6
   measured_confounders   <- measured_confounders[1:num_computed]
   unmeasured_confounders <- unmeasured_confounders[1:num_computed]
   true_coefficients      <- true_coefficients[1:num_computed]
@@ -1648,7 +1648,7 @@ for (step_off_on in c(0)) {
   measured_confounders   <- c(16, 12, 32, 24, 64, 48, 128,  96)
   unmeasured_confounders <- c( 0,  4,  0,  8,  0, 16,   0,  32)
   total_confounders      <- c(16, 16, 32, 32, 64, 64, 128, 128)
-  num_computed <- 4
+  num_computed <- 6
   measured_confounders   <- measured_confounders[1:num_computed]
   unmeasured_confounders <- unmeasured_confounders[1:num_computed]
   true_coefficients      <- true_coefficients[1:num_computed]
@@ -1866,7 +1866,7 @@ for (step_off_on in c(0)) {
   measured_confounders   <- c(16, 12, 32, 24, 64, 48, 128,  96)
   unmeasured_confounders <- c( 0,  4,  0,  8,  0, 16,   0,  32)
   total_confounders      <- c(16, 16, 32, 32, 64, 64, 128, 128)
-  num_computed <- 8
+  num_computed <- 6
   measured_confounders   <- measured_confounders[1:num_computed]
   unmeasured_confounders <- unmeasured_confounders[1:num_computed]
   true_coefficients      <- true_coefficients[1:num_computed]
