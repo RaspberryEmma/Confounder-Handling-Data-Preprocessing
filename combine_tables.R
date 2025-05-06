@@ -116,18 +116,24 @@ scenario_9_step_1_standard_error_second_half_table <- read.csv("temp/scenario_9_
 scenario_1_causal_estimation_table <- data.frame(scenario_1_step_0_causal_estimation_table$measured_confounders,
                                                  scenario_1_step_0_causal_estimation_table$unmeasured_confounders,
                                                  scenario_1_step_0_causal_estimation_table$linear_full_bias,
+                                                 scenario_1_step_0_causal_estimation_table$linear_full_bias_percentage,
                                                  scenario_1_step_0_causal_estimation_table$linear_full_coverage,
 
                                                  scenario_1_step_1_causal_estimation_table$stepwise_bias,
+                                                 scenario_1_step_1_causal_estimation_table$stepwise_bias_percentage,
                                                  scenario_1_step_1_causal_estimation_table$stepwise_coverage,
                                                  scenario_1_step_1_causal_estimation_table$stepwise_X_bias,
+                                                 scenario_1_step_1_causal_estimation_table$stepwise_X_bias_percentage,
                                                  scenario_1_step_1_causal_estimation_table$stepwise_X_coverage,
 
                                                  scenario_1_step_0_causal_estimation_table$lasso_bias,
+                                                 scenario_1_step_0_causal_estimation_table$lasso_bias_percentage,
                                                  scenario_1_step_0_causal_estimation_table$lasso_coverage,
                                                  scenario_1_step_0_causal_estimation_table$lasso_X_bias,
+                                                 scenario_1_step_0_causal_estimation_table$lasso_X_bias_percentage,
                                                  scenario_1_step_0_causal_estimation_table$lasso_X_coverage,
                                                  scenario_1_step_0_causal_estimation_table$lasso_union_bias,
+                                                 scenario_1_step_0_causal_estimation_table$lasso_union_bias_percentage,
                                                  scenario_1_step_0_causal_estimation_table$lasso_union_coverage)
 colnames(scenario_1_causal_estimation_table) <- colnames(scenario_1_step_0_causal_estimation_table)
 
@@ -171,23 +177,33 @@ scenario_1_standard_error_second_half_table <- scenario_1_step_0_standard_error_
 
 # ----- scenario_2 -----
 
+# NB: for stepwise portion, we have 7 conf sets computed instead of the usual 6
+# hence only one structural NA
+
 scenario_2_causal_estimation_table <- data.frame(scenario_2_step_0_causal_estimation_table$measured_confounders,
                                                  scenario_2_step_0_causal_estimation_table$unmeasured_confounders,
                                                  scenario_2_step_0_causal_estimation_table$linear_full_bias,
+                                                 scenario_2_step_0_causal_estimation_table$linear_full_bias_percentage,
                                                  scenario_2_step_0_causal_estimation_table$linear_full_coverage,
                                                  
-                                                 c(scenario_2_step_1_causal_estimation_table$stepwise_bias, NA, NA),
-                                                 c(scenario_2_step_1_causal_estimation_table$stepwise_coverage, NA, NA),
-                                                 c(scenario_2_step_1_causal_estimation_table$stepwise_X_bias, NA, NA),
-                                                 c(scenario_2_step_1_causal_estimation_table$stepwise_X_coverage, NA, NA),
+                                                 c(scenario_2_step_1_causal_estimation_table$stepwise_bias),
+                                                 c(scenario_2_step_1_causal_estimation_table$stepwise_bias_percentage),
+                                                 c(scenario_2_step_1_causal_estimation_table$stepwise_coverage),
+                                                 c(scenario_2_step_1_causal_estimation_table$stepwise_X_bias),
+                                                 c(scenario_2_step_1_causal_estimation_table$stepwise_X_bias_percentage),
+                                                 c(scenario_2_step_1_causal_estimation_table$stepwise_X_coverage),
                                                  
                                                  scenario_2_step_0_causal_estimation_table$lasso_bias,
+                                                 scenario_2_step_0_causal_estimation_table$lasso_bias_percentage,
                                                  scenario_2_step_0_causal_estimation_table$lasso_coverage,
                                                  scenario_2_step_0_causal_estimation_table$lasso_X_bias,
+                                                 scenario_2_step_0_causal_estimation_table$lasso_X_bias_percentage,
                                                  scenario_2_step_0_causal_estimation_table$lasso_X_coverage,
                                                  scenario_2_step_0_causal_estimation_table$lasso_union_bias,
+                                                 scenario_2_step_0_causal_estimation_table$lasso_union_bias_percentage,
                                                  scenario_2_step_0_causal_estimation_table$lasso_union_coverage)
 colnames(scenario_2_causal_estimation_table) <- colnames(scenario_2_step_0_causal_estimation_table)
+
 
 scenario_2_backdoor_pathway_table <- data.frame(scenario_2_step_0_backdoor_pathway_table$measured_confounders,
                                                 scenario_2_step_0_backdoor_pathway_table$unmeasured_confounders,
@@ -195,10 +211,10 @@ scenario_2_backdoor_pathway_table <- data.frame(scenario_2_step_0_backdoor_pathw
                                                 scenario_2_step_0_backdoor_pathway_table$linear_full_blocked,
                                                 scenario_2_step_0_backdoor_pathway_table$linear_full_blocked_percentage,
                                                 
-                                                c(scenario_2_step_1_backdoor_pathway_table$stepwise_blocked, NA, NA),
-                                                c(scenario_2_step_1_backdoor_pathway_table$stepwise_blocked_percentage, NA, NA),
-                                                c(scenario_2_step_1_backdoor_pathway_table$stepwise_X_blocked, NA, NA),
-                                                c(scenario_2_step_1_backdoor_pathway_table$stepwise_X_blocked_percentage, NA, NA),
+                                                c(scenario_2_step_1_backdoor_pathway_table$stepwise_blocked),
+                                                c(scenario_2_step_1_backdoor_pathway_table$stepwise_blocked_percentage),
+                                                c(scenario_2_step_1_backdoor_pathway_table$stepwise_X_blocked),
+                                                c(scenario_2_step_1_backdoor_pathway_table$stepwise_X_blocked_percentage),
                                                 
                                                 scenario_2_step_0_backdoor_pathway_table$lasso_blocked,
                                                 scenario_2_step_0_backdoor_pathway_table$lasso_blocked_percentage,
@@ -215,12 +231,12 @@ scenario_2_standard_error_first_half_table <- data.frame(scenario_2_step_0_stand
                                                          scenario_2_step_0_standard_error_first_half_table$linear_full_emp_se,
                                                          scenario_2_step_0_standard_error_first_half_table$linear_full_model_se,
                                                          
-                                                         c(scenario_2_step_1_standard_error_first_half_table$stepwise_mean_coef, NA, NA),
-                                                         c(scenario_2_step_1_standard_error_first_half_table$stepwise_emp_se, NA, NA),
-                                                         c(scenario_2_step_1_standard_error_first_half_table$stepwise_model_se, NA, NA),
-                                                         c(scenario_2_step_1_standard_error_first_half_table$stepwise_X_mean_coef, NA, NA),
-                                                         c(scenario_2_step_1_standard_error_first_half_table$stepwise_X_emp_se, NA, NA),
-                                                         c(scenario_2_step_1_standard_error_first_half_table$stepwise_X_model_se, NA, NA)
+                                                         c(scenario_2_step_1_standard_error_first_half_table$stepwise_mean_coef),
+                                                         c(scenario_2_step_1_standard_error_first_half_table$stepwise_emp_se),
+                                                         c(scenario_2_step_1_standard_error_first_half_table$stepwise_model_se),
+                                                         c(scenario_2_step_1_standard_error_first_half_table$stepwise_X_mean_coef),
+                                                         c(scenario_2_step_1_standard_error_first_half_table$stepwise_X_emp_se),
+                                                         c(scenario_2_step_1_standard_error_first_half_table$stepwise_X_model_se)
                                                          )
 colnames(scenario_2_standard_error_first_half_table) <- colnames(scenario_2_step_0_standard_error_first_half_table)
 
@@ -233,18 +249,24 @@ scenario_2_standard_error_second_half_table <- scenario_2_step_0_standard_error_
 scenario_3_causal_estimation_table <- data.frame(scenario_3_step_0_causal_estimation_table$measured_confounders,
                                                  scenario_3_step_0_causal_estimation_table$unmeasured_confounders,
                                                  scenario_3_step_0_causal_estimation_table$linear_full_bias,
+                                                 scenario_3_step_0_causal_estimation_table$linear_full_bias_percentage,
                                                  scenario_3_step_0_causal_estimation_table$linear_full_coverage,
                                                  
                                                  c(scenario_3_step_1_causal_estimation_table$stepwise_bias, NA, NA),
+                                                 c(scenario_3_step_1_causal_estimation_table$stepwise_bias_percentage, NA, NA),
                                                  c(scenario_3_step_1_causal_estimation_table$stepwise_coverage, NA, NA),
                                                  c(scenario_3_step_1_causal_estimation_table$stepwise_X_bias, NA, NA),
+                                                 c(scenario_3_step_1_causal_estimation_table$stepwise_X_bias_percentage, NA, NA),
                                                  c(scenario_3_step_1_causal_estimation_table$stepwise_X_coverage, NA, NA),
                                                  
                                                  scenario_3_step_0_causal_estimation_table$lasso_bias,
+                                                 scenario_3_step_0_causal_estimation_table$lasso_bias_percentage,
                                                  scenario_3_step_0_causal_estimation_table$lasso_coverage,
                                                  scenario_3_step_0_causal_estimation_table$lasso_X_bias,
+                                                 scenario_3_step_0_causal_estimation_table$lasso_X_bias_percentage,
                                                  scenario_3_step_0_causal_estimation_table$lasso_X_coverage,
                                                  scenario_3_step_0_causal_estimation_table$lasso_union_bias,
+                                                 scenario_3_step_0_causal_estimation_table$lasso_union_bias_percentage,
                                                  scenario_3_step_0_causal_estimation_table$lasso_union_coverage)
 colnames(scenario_3_causal_estimation_table) <- colnames(scenario_3_step_0_causal_estimation_table)
 
@@ -292,18 +314,24 @@ scenario_3_standard_error_second_half_table <- scenario_3_step_0_standard_error_
 scenario_4_causal_estimation_table <- data.frame(scenario_4_step_0_causal_estimation_table$measured_confounders,
                                                  scenario_4_step_0_causal_estimation_table$unmeasured_confounders,
                                                  scenario_4_step_0_causal_estimation_table$linear_full_bias,
+                                                 scenario_4_step_0_causal_estimation_table$linear_full_bias_percentage,
                                                  scenario_4_step_0_causal_estimation_table$linear_full_coverage,
                                                  
                                                  c(scenario_4_step_1_causal_estimation_table$stepwise_bias, NA, NA),
+                                                 c(scenario_4_step_1_causal_estimation_table$stepwise_bias_percentage, NA, NA),
                                                  c(scenario_4_step_1_causal_estimation_table$stepwise_coverage, NA, NA),
                                                  c(scenario_4_step_1_causal_estimation_table$stepwise_X_bias, NA, NA),
+                                                 c(scenario_4_step_1_causal_estimation_table$stepwise_X_bias_percentage, NA, NA),
                                                  c(scenario_4_step_1_causal_estimation_table$stepwise_X_coverage, NA, NA),
                                                  
                                                  scenario_4_step_0_causal_estimation_table$lasso_bias,
+                                                 scenario_4_step_0_causal_estimation_table$lasso_bias_percentage,
                                                  scenario_4_step_0_causal_estimation_table$lasso_coverage,
                                                  scenario_4_step_0_causal_estimation_table$lasso_X_bias,
+                                                 scenario_4_step_0_causal_estimation_table$lasso_X_bias_percentage,
                                                  scenario_4_step_0_causal_estimation_table$lasso_X_coverage,
                                                  scenario_4_step_0_causal_estimation_table$lasso_union_bias,
+                                                 scenario_4_step_0_causal_estimation_table$lasso_union_bias_percentage,
                                                  scenario_4_step_0_causal_estimation_table$lasso_union_coverage)
 colnames(scenario_4_causal_estimation_table) <- colnames(scenario_4_step_0_causal_estimation_table)
 
@@ -351,18 +379,24 @@ scenario_4_standard_error_second_half_table <- scenario_4_step_0_standard_error_
 scenario_5_causal_estimation_table <- data.frame(scenario_5_step_0_causal_estimation_table$measured_confounders,
                                                  scenario_5_step_0_causal_estimation_table$unmeasured_confounders,
                                                  scenario_5_step_0_causal_estimation_table$linear_full_bias,
+                                                 scenario_5_step_0_causal_estimation_table$linear_full_bias_percentage,
                                                  scenario_5_step_0_causal_estimation_table$linear_full_coverage,
                                                  
                                                  c(scenario_5_step_1_causal_estimation_table$stepwise_bias, NA, NA),
+                                                 c(scenario_5_step_1_causal_estimation_table$stepwise_bias_percentage, NA, NA),
                                                  c(scenario_5_step_1_causal_estimation_table$stepwise_coverage, NA, NA),
                                                  c(scenario_5_step_1_causal_estimation_table$stepwise_X_bias, NA, NA),
+                                                 c(scenario_5_step_1_causal_estimation_table$stepwise_X_bias_percentage, NA, NA),
                                                  c(scenario_5_step_1_causal_estimation_table$stepwise_X_coverage, NA, NA),
                                                  
                                                  scenario_5_step_0_causal_estimation_table$lasso_bias,
+                                                 scenario_5_step_0_causal_estimation_table$lasso_bias_percentage,
                                                  scenario_5_step_0_causal_estimation_table$lasso_coverage,
                                                  scenario_5_step_0_causal_estimation_table$lasso_X_bias,
+                                                 scenario_5_step_0_causal_estimation_table$lasso_X_bias_percentage,
                                                  scenario_5_step_0_causal_estimation_table$lasso_X_coverage,
                                                  scenario_5_step_0_causal_estimation_table$lasso_union_bias,
+                                                 scenario_5_step_0_causal_estimation_table$lasso_union_bias_percentage,
                                                  scenario_5_step_0_causal_estimation_table$lasso_union_coverage)
 colnames(scenario_5_causal_estimation_table) <- colnames(scenario_5_step_0_causal_estimation_table)
 
@@ -410,18 +444,24 @@ scenario_5_standard_error_second_half_table <- scenario_5_step_0_standard_error_
 scenario_6_causal_estimation_table <- data.frame(scenario_6_step_0_causal_estimation_table$measured_confounders,
                                                  scenario_6_step_0_causal_estimation_table$unmeasured_confounders,
                                                  scenario_6_step_0_causal_estimation_table$linear_full_bias,
+                                                 scenario_6_step_0_causal_estimation_table$linear_full_bias_percentage,
                                                  scenario_6_step_0_causal_estimation_table$linear_full_coverage,
                                                  
                                                  c(scenario_6_step_1_causal_estimation_table$stepwise_bias, NA, NA),
+                                                 c(scenario_6_step_1_causal_estimation_table$stepwise_bias_percentage, NA, NA),
                                                  c(scenario_6_step_1_causal_estimation_table$stepwise_coverage, NA, NA),
                                                  c(scenario_6_step_1_causal_estimation_table$stepwise_X_bias, NA, NA),
+                                                 c(scenario_6_step_1_causal_estimation_table$stepwise_X_bias_percentage, NA, NA),
                                                  c(scenario_6_step_1_causal_estimation_table$stepwise_X_coverage, NA, NA),
                                                  
                                                  scenario_6_step_0_causal_estimation_table$lasso_bias,
+                                                 scenario_6_step_0_causal_estimation_table$lasso_bias_percentage,
                                                  scenario_6_step_0_causal_estimation_table$lasso_coverage,
                                                  scenario_6_step_0_causal_estimation_table$lasso_X_bias,
+                                                 scenario_6_step_0_causal_estimation_table$lasso_X_bias_percentage,
                                                  scenario_6_step_0_causal_estimation_table$lasso_X_coverage,
                                                  scenario_6_step_0_causal_estimation_table$lasso_union_bias,
+                                                 scenario_6_step_0_causal_estimation_table$lasso_union_bias_percentage,
                                                  scenario_6_step_0_causal_estimation_table$lasso_union_coverage)
 colnames(scenario_6_causal_estimation_table) <- colnames(scenario_6_step_0_causal_estimation_table)
 
@@ -469,18 +509,24 @@ scenario_6_standard_error_second_half_table <- scenario_6_step_0_standard_error_
 scenario_7_causal_estimation_table <- data.frame(scenario_7_step_0_causal_estimation_table$measured_confounders,
                                                  scenario_7_step_0_causal_estimation_table$unmeasured_confounders,
                                                  scenario_7_step_0_causal_estimation_table$linear_full_bias,
+                                                 scenario_7_step_0_causal_estimation_table$linear_full_bias_percentage,
                                                  scenario_7_step_0_causal_estimation_table$linear_full_coverage,
                                                  
                                                  c(scenario_7_step_1_causal_estimation_table$stepwise_bias, NA, NA),
+                                                 c(scenario_7_step_1_causal_estimation_table$stepwise_bias_percentage, NA, NA),
                                                  c(scenario_7_step_1_causal_estimation_table$stepwise_coverage, NA, NA),
                                                  c(scenario_7_step_1_causal_estimation_table$stepwise_X_bias, NA, NA),
+                                                 c(scenario_7_step_1_causal_estimation_table$stepwise_X_bias_percentage, NA, NA),
                                                  c(scenario_7_step_1_causal_estimation_table$stepwise_X_coverage, NA, NA),
                                                  
                                                  scenario_7_step_0_causal_estimation_table$lasso_bias,
+                                                 scenario_7_step_0_causal_estimation_table$lasso_bias_percentage,
                                                  scenario_7_step_0_causal_estimation_table$lasso_coverage,
                                                  scenario_7_step_0_causal_estimation_table$lasso_X_bias,
+                                                 scenario_7_step_0_causal_estimation_table$lasso_X_bias_percentage,
                                                  scenario_7_step_0_causal_estimation_table$lasso_X_coverage,
                                                  scenario_7_step_0_causal_estimation_table$lasso_union_bias,
+                                                 scenario_7_step_0_causal_estimation_table$lasso_union_bias_percentage,
                                                  scenario_7_step_0_causal_estimation_table$lasso_union_coverage)
 colnames(scenario_7_causal_estimation_table) <- colnames(scenario_7_step_0_causal_estimation_table)
 
@@ -525,49 +571,55 @@ scenario_7_standard_error_second_half_table <- scenario_7_step_0_standard_error_
 
 # ----- scenario_8 -----
 
-scenario_8_causal_estimation_table <- data.frame(scenario_8_step_0_causal_estimation_table$measured_confounders,
-                                                 scenario_8_step_0_causal_estimation_table$unmeasured_confounders,
-                                                 scenario_8_step_0_causal_estimation_table$linear_full_bias,
-                                                 scenario_8_step_0_causal_estimation_table$linear_full_coverage,
-
+scenario_8_causal_estimation_table <- data.frame(c(scenario_8_step_0_causal_estimation_table$measured_confounders, NA, NA),
+                                                 c(scenario_8_step_0_causal_estimation_table$unmeasured_confounders, NA, NA),
+                                                 c(scenario_8_step_0_causal_estimation_table$linear_full_bias, NA, NA),
+                                                 c(scenario_8_step_0_causal_estimation_table$linear_full_bias_percentage, NA, NA),
+                                                 c(scenario_8_step_0_causal_estimation_table$linear_full_coverage, NA, NA),
+                                                 
                                                  c(scenario_8_step_1_causal_estimation_table$stepwise_bias, NA, NA),
+                                                 c(scenario_8_step_1_causal_estimation_table$stepwise_bias_percentage, NA, NA),
                                                  c(scenario_8_step_1_causal_estimation_table$stepwise_coverage, NA, NA),
                                                  c(scenario_8_step_1_causal_estimation_table$stepwise_X_bias, NA, NA),
+                                                 c(scenario_8_step_1_causal_estimation_table$stepwise_X_bias_percentage, NA, NA),
                                                  c(scenario_8_step_1_causal_estimation_table$stepwise_X_coverage, NA, NA),
-
-                                                 scenario_8_step_0_causal_estimation_table$lasso_bias,
-                                                 scenario_8_step_0_causal_estimation_table$lasso_coverage,
-                                                 scenario_8_step_0_causal_estimation_table$lasso_X_bias,
-                                                 scenario_8_step_0_causal_estimation_table$lasso_X_coverage,
-                                                 scenario_8_step_0_causal_estimation_table$lasso_union_bias,
-                                                 scenario_8_step_0_causal_estimation_table$lasso_union_coverage)
+                                                 
+                                                 c(scenario_8_step_0_causal_estimation_table$lasso_bias, NA, NA),
+                                                 c(scenario_8_step_0_causal_estimation_table$lasso_bias_percentage, NA, NA),
+                                                 c(scenario_8_step_0_causal_estimation_table$lasso_coverage, NA, NA),
+                                                 c(scenario_8_step_0_causal_estimation_table$lasso_X_bias, NA, NA),
+                                                 c(scenario_8_step_0_causal_estimation_table$lasso_X_bias_percentage, NA, NA),
+                                                 c(scenario_8_step_0_causal_estimation_table$lasso_X_coverage, NA, NA),
+                                                 c(scenario_8_step_0_causal_estimation_table$lasso_union_bias, NA, NA),
+                                                 c(scenario_8_step_0_causal_estimation_table$lasso_union_bias_percentage, NA, NA),
+                                                 c(scenario_8_step_0_causal_estimation_table$lasso_union_coverage, NA, NA))
 colnames(scenario_8_causal_estimation_table) <- colnames(scenario_8_step_0_causal_estimation_table)
 
-scenario_8_backdoor_pathway_table <- data.frame(scenario_8_step_0_backdoor_pathway_table$measured_confounders,
-                                                scenario_8_step_0_backdoor_pathway_table$unmeasured_confounders,
-                                                scenario_8_step_0_backdoor_pathway_table$open_paths,
-                                                scenario_8_step_0_backdoor_pathway_table$linear_full_blocked,
-                                                scenario_8_step_0_backdoor_pathway_table$linear_full_blocked_percentage,
+scenario_8_backdoor_pathway_table <- data.frame(c(scenario_8_step_0_backdoor_pathway_table$measured_confounders, NA, NA),
+                                                c(scenario_8_step_0_backdoor_pathway_table$unmeasured_confounders, NA, NA),
+                                                c(scenario_8_step_0_backdoor_pathway_table$open_paths, NA, NA),
+                                                c(scenario_8_step_0_backdoor_pathway_table$linear_full_blocked, NA, NA),
+                                                c(scenario_8_step_0_backdoor_pathway_table$linear_full_blocked_percentage, NA, NA),
 
                                                 c(scenario_8_step_1_backdoor_pathway_table$stepwise_blocked, NA, NA),
                                                 c(scenario_8_step_1_backdoor_pathway_table$stepwise_blocked_percentage, NA, NA),
                                                 c(scenario_8_step_1_backdoor_pathway_table$stepwise_X_blocked, NA, NA),
                                                 c(scenario_8_step_1_backdoor_pathway_table$stepwise_X_blocked_percentage, NA, NA),
 
-                                                scenario_8_step_0_backdoor_pathway_table$lasso_blocked,
-                                                scenario_8_step_0_backdoor_pathway_table$lasso_blocked_percentage,
-                                                scenario_8_step_0_backdoor_pathway_table$lasso_X_blocked,
-                                                scenario_8_step_0_backdoor_pathway_table$lasso_X_blocked_percentage,
-                                                scenario_8_step_0_backdoor_pathway_table$lasso_union_blocked,
-                                                scenario_8_step_0_backdoor_pathway_table$lasso_union_blocked_percentage)
+                                                c(scenario_8_step_0_backdoor_pathway_table$lasso_blocked, NA, NA),
+                                                c(scenario_8_step_0_backdoor_pathway_table$lasso_blocked_percentage, NA, NA),
+                                                c(scenario_8_step_0_backdoor_pathway_table$lasso_X_blocked, NA, NA),
+                                                c(scenario_8_step_0_backdoor_pathway_table$lasso_X_blocked_percentage, NA, NA),
+                                                c(scenario_8_step_0_backdoor_pathway_table$lasso_union_blocked, NA, NA),
+                                                c(scenario_8_step_0_backdoor_pathway_table$lasso_union_blocked_percentage, NA, NA))
 colnames(scenario_8_backdoor_pathway_table) <- colnames(scenario_8_step_0_backdoor_pathway_table)
 
-scenario_8_standard_error_first_half_table <- data.frame(scenario_8_step_0_standard_error_first_half_table$measured_confounders,
-                                                         scenario_8_step_0_standard_error_first_half_table$unmeasured_confounders,
-                                                         scenario_8_step_0_standard_error_first_half_table$true_coefficients,
-                                                         scenario_8_step_0_standard_error_first_half_table$linear_full_mean_coef,
-                                                         scenario_8_step_0_standard_error_first_half_table$linear_full_emp_se,
-                                                         scenario_8_step_0_standard_error_first_half_table$linear_full_model_se,
+scenario_8_standard_error_first_half_table <- data.frame(c(scenario_8_step_0_standard_error_first_half_table$measured_confounders, NA, NA),
+                                                         c(scenario_8_step_0_standard_error_first_half_table$unmeasured_confounders, NA, NA),
+                                                         c(scenario_8_step_0_standard_error_first_half_table$true_coefficients, NA, NA),
+                                                         c(scenario_8_step_0_standard_error_first_half_table$linear_full_mean_coef, NA, NA),
+                                                         c(scenario_8_step_0_standard_error_first_half_table$linear_full_emp_se, NA, NA),
+                                                         c(scenario_8_step_0_standard_error_first_half_table$linear_full_model_se, NA, NA),
 
                                                          c(scenario_8_step_1_standard_error_first_half_table$stepwise_mean_coef, NA, NA),
                                                          c(scenario_8_step_1_standard_error_first_half_table$stepwise_emp_se, NA, NA),
@@ -587,18 +639,24 @@ scenario_8_standard_error_second_half_table <- scenario_8_step_0_standard_error_
 scenario_9_causal_estimation_table <- data.frame(scenario_9_step_0_causal_estimation_table$measured_confounders,
                                                  scenario_9_step_0_causal_estimation_table$unmeasured_confounders,
                                                  scenario_9_step_0_causal_estimation_table$linear_full_bias,
+                                                 scenario_9_step_0_causal_estimation_table$linear_full_bias_percentage,
                                                  scenario_9_step_0_causal_estimation_table$linear_full_coverage,
                                                  
                                                  c(scenario_9_step_1_causal_estimation_table$stepwise_bias, NA, NA),
+                                                 c(scenario_9_step_1_causal_estimation_table$stepwise_bias_percentage, NA, NA),
                                                  c(scenario_9_step_1_causal_estimation_table$stepwise_coverage, NA, NA),
                                                  c(scenario_9_step_1_causal_estimation_table$stepwise_X_bias, NA, NA),
+                                                 c(scenario_9_step_1_causal_estimation_table$stepwise_X_bias_percentage, NA, NA),
                                                  c(scenario_9_step_1_causal_estimation_table$stepwise_X_coverage, NA, NA),
                                                  
                                                  scenario_9_step_0_causal_estimation_table$lasso_bias,
+                                                 scenario_9_step_0_causal_estimation_table$lasso_bias_percentage,
                                                  scenario_9_step_0_causal_estimation_table$lasso_coverage,
                                                  scenario_9_step_0_causal_estimation_table$lasso_X_bias,
+                                                 scenario_9_step_0_causal_estimation_table$lasso_X_bias_percentage,
                                                  scenario_9_step_0_causal_estimation_table$lasso_X_coverage,
                                                  scenario_9_step_0_causal_estimation_table$lasso_union_bias,
+                                                 scenario_9_step_0_causal_estimation_table$lasso_union_bias_percentage,
                                                  scenario_9_step_0_causal_estimation_table$lasso_union_coverage)
 colnames(scenario_9_causal_estimation_table) <- colnames(scenario_9_step_0_causal_estimation_table)
 
